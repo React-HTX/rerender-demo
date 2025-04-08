@@ -1,0 +1,77 @@
+[
+  {
+    "userId": 1,
+    "id": 101,
+    "title": "I Tried to Center a Div for 8 Hours: A Dev's Odyssey",
+    "body": [
+      "It started as a five-minute task: center a div. Little did I know, I was walking into a war zone of CSS contradictions and personal doubt. I began with the classics: `text-align: center`, `margin: auto`, `display: flex`. None of them worked — at least not the way I wanted.",
+      {
+        "blockquote": "True centering comes not from code, but from inner peace."
+      },
+      "I created a dozen helper classes like `.pls-center`, `.really-center-this`, and even `.i-give-up`. My browser became a battlefield of DevTools experiments and rage-refreshing. Every time it looked right in Chrome, it broke in Safari. Firefox, naturally, displayed it upside down.",
+      "Eventually, I nested the div inside five other divs, all with specific widths and paddings. I wasn't coding anymore; I was performing CSS seance. I tried absolute positioning with transforms. It worked... until I resized the window.",
+      "At the end of the day, I copied someone’s CodePen and adjusted it to my use case. It worked perfectly. I committed the code and left a comment: `// do not touch this. it works. I don't know why.`",
+      "The next day, a junior dev touched it. The curse continues."
+    ]
+  },
+  {
+    "userId": 2,
+    "id": 102,
+    "title": "Why I’m Rewriting My To-Do App in Rust, Again",
+    "body": [
+      "It began as all things do: with a sense of purpose. I had a perfectly functioning to-do app in React + Firebase. But something deep inside me whispered, 'What if you did this in Rust?' And so, naturally, I threw out six months of work and began anew.",
+      "The compiler, however, had other ideas. It rejected my first `main()` function with such venom that I started to doubt my career choice. Traits, lifetimes, and borrowing rules began appearing in my dreams.",
+      {
+        "blockquote": "A to-do list never completed is still a list of intentions."
+      },
+      "I spent four hours figuring out how to update a single item in a vector. Then another hour figuring out how to print that item to the console in a readable format. By the end of the day, I had added one task... manually... via hardcoded data.",
+      "But I persisted. I learned about crates, cargo, and the bliss of compiling without errors. After a week, I had a terminal-based to-do app that allowed adding, listing, and deleting tasks — assuming you used the CLI like a wizard.",
+      "Will I use it every day? Absolutely not. But I did learn something. Mostly that I should probably stop rewriting my apps and start actually using them."
+    ]
+  },
+  {
+    "userId": 3,
+    "id": 103,
+    "title": "My CSS Broke and So Did I",
+    "body": [
+      "All I wanted was a button with a shadow. I opened up the stylesheet and added `box-shadow`. That was my first mistake. Within minutes, the button was levitating off the page. It wasn’t just styled — it was casting a shadow on my soul.",
+      "Then I tried to add a hover effect, but only the text changed color while the background stayed static. So I inspected it. Apparently, three other `.btn` classes were being layered on top of each other from different components, each with slightly different z-index rules.",
+      {
+        "blockquote": "There are two hard problems in computer science: cache invalidation, naming things, and CSS."
+      },
+      "I tried to isolate the styles, but the cascade fought back. Every `!important` I used made things worse. The final form of my button looked like a 3D hallucination and clicked itself if you scrolled too fast.",
+      "Eventually, I deleted the entire component and rebuilt it in Tailwind. It took 12 lines and just worked. I now exclusively write all styles using utility classes and ritual salt circles. It’s better this way.",
+      "I still get flashbacks when I see `position: relative;` in the wild."
+    ]
+  },
+  {
+    "userId": 4,
+    "id": 104,
+    "title": "Docker Containers and Existential Dread",
+    "body": [
+      "It started with a simple goal: containerize my API. The docs were clear, or so I thought. I wrote my first Dockerfile with pride, hit build, and watched it fail spectacularly. I stared at the logs like they were tea leaves predicting my doom.",
+      "So I rewrote it. Then I tried Docker Compose. Then I tried `docker run` with a dozen flags. I started saying things like 'bind mount' and 'entrypoint script' in normal conversations. My partner was concerned.",
+      {
+        "blockquote": "In the beginning was the container, and the container was without form, and void."
+      },
+      "Eventually I got it running... locally. But when I pushed it to the server, it refused to talk to the database. I opened so many terminal tabs I had to label them with emojis. One container ran fine, but exited quietly after 10 seconds like it had fulfilled its purpose and ascended.",
+      "By week’s end, I had a working system. It was running, deployed, and stable. I also hadn’t showered in three days and had developed a mysterious twitch in my left eye. But it was worth it.",
+      "Now, every time someone says 'Let’s just use Docker,' I shudder. And smile. Because I know what’s coming."
+    ]
+  },
+  {
+    "userId": 5,
+    "id": 105,
+    "title": "You Won't Believe This One Weird Trick to Fix CORS",
+    "body": [
+      "It was supposed to be easy. I just needed to call an API from my frontend app. But CORS — the gatekeeper of the web — had other ideas. The browser screamed at me like I’d broken some ancient oath. 'No Access-Control-Allow-Origin header!' it said, judgingly.",
+      "So I did what any sane dev would do: I googled. Then I installed a CORS browser extension. Then I proxied requests. Then I cried a little.",
+      {
+        "blockquote": "CORS isn’t a bug. It’s a feature. A very angry, gatekeeping feature."
+      },
+      "I tried adding headers in the backend. They worked in development. But in production? Nope. The API didn’t even acknowledge my requests — it just ghosted me. I started talking to backend devs like I was negotiating a hostage situation.",
+      "Eventually, someone updated the API gateway settings. Suddenly it worked. No code change. Just... magic. The error disappeared like a ghost that had finally found peace. We never spoke of it again.",
+      "To this day, I still don’t fully understand how it got fixed. I just know I’ll be avoiding anything cross-origin for as long as I live."
+    ]
+  }
+]

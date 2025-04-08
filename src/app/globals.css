@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #131313;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+@theme {
+  --color-mint-500: oklch(0.72 0.11 178);
+  --color-cto-paul-50: #e6ebf7;
+  --color-cto-paul-100: #cfd9f0;
+  --color-cto-paul-200: #a9bde3;
+  --color-cto-paul-300: #7d99d3;
+  --color-cto-paul-400: #5877c3;
+  --color-cto-paul-500: #2b4e9f;
+  --color-cto-paul-600: #23438a;
+  --color-cto-paul-700: #1b366f;
+  --color-cto-paul-800: #142954;
+  --color-cto-paul-900: #0c1c3a;
+
+  --color-cto-paul: var(--color-cto-paul-500); /* Default to 500 */
+
+  /* Black Shades */
+  --color-black-50: #f2f2f2; /* Ultra light */
+  --color-black-100: #e6e6e6;
+  --color-black-200: #cccccc;
+  --color-black-300: #b3b3b3;
+  --color-black-400: #999999;
+  --color-black-500: #131313; /* Base Black */
+  --color-black-600: #0f0f0f;
+  --color-black-700: #0b0b0b;
+  --color-black-800: #080808;
+  --color-black-900: #040404; /* Deep Black */
+
+  /* Default Black to Match Base */
+  --color-black: var(--color-black-500);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
