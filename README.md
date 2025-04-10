@@ -1,39 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# React Rendering Demo – “Why Did This Re-render?”
 
-## Getting Started
+This is a Next.js 15+ app designed for a live talk about React rendering. It walks through common rendering patterns using `useState`, `useEffect`, and intentional re-render pitfalls.
 
-First, run the development server:
+## ⚙️ Tech Stack
+
+- **Next.js 15** (App Router)
+- **React 19**
+- **Tailwind CSS 4**
+- **TypeScript 5**
+- **Heroicons + Headless UI**
+- **Static content via JSON**
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/your-username/ctopaul.git
+cd ctopaul
+```
+
+### 2. Install dependencies
+
+Using NPM:
+
+```bash
+npm install
+```
+
+Or Yarn:
+
+```bash
+yarn install
+```
+
+### 3. Run the dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser to [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧪 Demo Scenarios
 
-## Learn More
+### 🔹 `/one-render`
 
-To learn more about Next.js, take a look at the following resources:
+Static-only render. No re-renders after mount.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🔹 `/state-render`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Demonstrates how `useState` triggers re-renders.
 
-## Deploy on Vercel
+### 🔹 `/after-render`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Mount-time `useEffect`
+- Dependency-triggered `useEffect`
+- Cleanup logging
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# ctopaul
-# rerender-demo
-# rerender-demo
+### 🔹 `/blogposts` (main demo)
+
+- Dynamic post switching
+- Simulated fetch delay
+- Like toggling
+
+---
+
+## 💣 Infinite Loop Demo (Optional)
+
+Inside `BlogPosts.tsx`, uncomment this block to simulate an infinite re-render:
+
+## 🧠 Author
+
+**Paul Barrón**  
+Frontend Dev, Technical PM  
+_Cowritten by ChatGPT 🤝_
+
+---
+
+## 📄 License
+
+MIT License – Use, remix, and teach freely!

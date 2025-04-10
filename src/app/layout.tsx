@@ -5,9 +5,10 @@ import "./globals.css"; // Optional, include if you have global styles
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "After Render", href: "/after-render" },
   { name: "One Render", href: "/one-render" },
   { name: "State Render", href: "/state-render" },
+  { name: "After Render", href: "/after-render" },
+  { name: "Infinite Loop", href: "/infinite-loop" },
 ];
 
 export default function RootLayout({
