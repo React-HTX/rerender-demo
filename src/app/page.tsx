@@ -50,32 +50,9 @@ export default function BlogPosts() {
 
   return (
     <div className="bg-zinc-900">
-      <div className="flex max-w-5xl mx-auto">
-        {/* Table of Contents */}
-        <aside className="relative mt-6 self-start w-64 h-screen overflow-y-auto">
-          <div className="sticky top-0 px-4 py-6 bg-white dark:bg-zinc-800 border-r border-gray-200 dark:border-zinc-700 p-6 rounded-lg shadow shadow-gray-600 mx-4 ">
-            <h2 className="text-lg font-semibold mb-4 text-zinc-800 dark:text-gray-100">
-              Table of Contents
-            </h2>
-            <ul className="space-y-2">
-              {fallbackData.map((item) => (
-                <li key={item.id}>
-                  <button
-                    onClick={() => setSelectedPostId(item.id)}
-                    className={`w-full text-left text-gray-100 px-2 py-1 rounded hover:bg-zinc-200 dark:hover:bg-zinc-700 ${
-                      item.id === selectedPostId ? "font-bold underline" : ""
-                    }`}
-                  >
-                    {item.title}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </aside>
-
+      <div className="flex flex-col md:flex-row gap-4 max-w-5xl mx-auto">
         {/* Main Content */}
-        <main className="flex-1 mt-6 flex justify-center overflow-y-auto">
+        <main className="w-full md:w-[70%] flex justify-center">
           {loading && (
             <p className="text-gray-500 dark:text-gray-300">Loading post...</p>
           )}
@@ -130,6 +107,28 @@ export default function BlogPosts() {
             </p>
           )}
         </main>
+        {/* Table of Contents */}
+        <aside className="w-full md:w-[30%] h-screen">
+          <div className="sticky top-0 px-4 py-6 bg-white dark:bg-zinc-800 border-r border-gray-200 dark:border-zinc-700 p-6 rounded-lg shadow shadow-gray-600 mx-4 ">
+            <h2 className="text-lg font-semibold mb-4 text-zinc-800 dark:text-gray-100">
+              Table of Contents
+            </h2>
+            <ul className="space-y-2">
+              {fallbackData.map((item) => (
+                <li key={item.id}>
+                  <button
+                    onClick={() => setSelectedPostId(item.id)}
+                    className={`w-full text-left text-gray-100 px-2 py-1 rounded hover:bg-zinc-200 dark:hover:bg-zinc-700 ${
+                      item.id === selectedPostId ? "font-bold underline" : ""
+                    }`}
+                  >
+                    {item.title}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </aside>
       </div>
     </div>
   );
