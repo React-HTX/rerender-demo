@@ -14,16 +14,16 @@ type Post = {
 };
 
 export default function StateRender() {
+  // ✅ Using static fallback for now
+  const post = fallbackData[0];
+  const imageUrl = `https://picsum.photos/800/400?random=${post.id}`;
+
   // ✨ Step 1: Add state for selectedPostId
 
   // ✨ Step 2: Add state for liked
 
-  // ✅ Using static fallback for now
-  const post = fallbackData[0]; // 🔁 Replace with: fallbackData.find(p => p.id === selectedPostId)
-  const imageUrl = `https://picsum.photos/800/400?random=${post.id}`;
-
   // ✨ Add logging once state is live
-  // console.log("🌀 BlogPosts rendered");
+  console.log("📒 post:", post.title);
   // console.log("📌 selectedPostId:", selectedPostId);
   // console.log("💖 liked:", liked);
 
@@ -78,10 +78,6 @@ export default function StateRender() {
                     // ✨ Hook this up: setSelectedPostId(item.id)
                     onClick={() => {}}
                     className="w-full text-left text-gray-100 px-2 py-1 rounded hover:bg-zinc-200 dark:hover:bg-zinc-700"
-                    // ✅ Add this when live:
-                    // className={`... ${
-                    //   item.id === selectedPostId ? "font-bold underline" : ""
-                    // }`}
                   >
                     {item.title}
                   </button>
