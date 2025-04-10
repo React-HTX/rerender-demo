@@ -23,9 +23,8 @@ export default function AfterRender() {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
 
   console.log("🌀 BlogPosts rendered | selectedPostId:", selectedPostId);
-  console.log("💖 liked:", liked);
 
-  // 🧠 Step 1: useEffect — logs and cleanup demo only
+  // Step 1: useEffect — logs and cleanup demo only
   useEffect(() => {
     console.log("🎯 useEffect triggered");
 
@@ -34,7 +33,7 @@ export default function AfterRender() {
     };
   }, []); // empty dependency array = run once on mount
 
-  // 🧠 Step 2: useEffect to fetch a new image URL when selectedPostId changes
+  // Step 2: useEffect to fetch a new image URL when selectedPostId changes
   useEffect(() => {
     console.log("🖼️ Fetching new image for post:", selectedPostId);
 
@@ -42,6 +41,8 @@ export default function AfterRender() {
     const newImage = `https://picsum.photos/800/400?random=${selectedPostId}`;
     setImageUrl(newImage);
   }, [selectedPostId]); // re-run ONLY when post ID changes
+
+  // Step 3: useEffect to update post when selectedPostId changes
 
   return (
     <div className="bg-zinc-900">
@@ -99,7 +100,7 @@ export default function AfterRender() {
                 <li key={item.id}>
                   <button
                     onClick={() => setSelectedPostId(item.id)}
-                    className={`w-full text-left text-gray-100 px-2 py-1 rounded hover:bg-zinc-200 dark:hover:bg-zinc-700 ${
+                    className={`w-full text-left text-gray-100 px-2 py-1 rounded hover:bg-zinc-200 dark:hover:bg-zinc-700 cursor-pointer ${
                       item.id === selectedPostId ? "font-bold underline" : ""
                     }`}
                   >
